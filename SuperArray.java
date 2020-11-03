@@ -46,4 +46,32 @@ public class SuperArray {
 		data[index] = element;
 		return replaced;
 	}
+
+	//11/3 class 
+	public boolean isEmpty() { //returns true if list contains no elements
+		return(size() == 0);
+	}
+
+	public void clear() { //reset size to 0, no ref to old value in array
+		data = new String[0];
+		size = 0;
+	}
+
+	public String toString() { //format:"[e0, e1.. eN]" where size = N + 1, only displays elements that were added 
+		if(size() == 0) return "[]";
+		String result = "[";
+		for(int i = 0; i < size() - 1; i++) {
+			result += data[i] + ", ";
+		}
+		result += data[size() - 1];
+		return result;
+	}
+
+	public boolean contains(String s) {
+		boolean result = false;
+		for(int i = 0; i < data.length; i++) {
+			if(s.equals(data[i])) result = true;
+		}
+		return result;
+	}
 }
