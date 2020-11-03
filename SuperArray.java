@@ -11,12 +11,7 @@ public class SuperArray {
 
 	//methods
 	public int size() { //c. returns number of elements in this list
-		int len = 0;
-		for(int i = 0; i < size; i++) {
-			if(data[i] != null) len++;
-			else break;
-		}
-		return len;
+		return size;
 	}
 
 	public void resize() { //g. increase capacity by creating a larger array & copying values into new one
@@ -29,12 +24,10 @@ public class SuperArray {
 	}
 
 	public boolean add(String element) { //d. appends the specified element to the end of this list
-		if(size() == size) {
-			data[size()] = element;
-			return true;
-		}
-		resize();
-		return add(element);
+		if(data.length == size) resize();
+		data[size] = element; 
+		size++; 
+		return true;
 	}
 
 	public String get(int index) { //e. return element at the specified position in list
