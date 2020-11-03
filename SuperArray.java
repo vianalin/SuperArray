@@ -53,7 +53,7 @@ public class SuperArray {
 	}
 
 	public void clear() { //reset size to 0, no ref to old value in array
-		data = new String[0];
+		data = new String[10];
 		size = 0;
 	}
 
@@ -63,14 +63,14 @@ public class SuperArray {
 		for(int i = 0; i < size() - 1; i++) {
 			result += data[i] + ", ";
 		}
-		result += data[size() - 1];
+		result = result + data[size() - 1] + "]";
 		return result;
 	}
 
 	public boolean contains(String s) {
 		boolean result = false;
 		for(int i = 0; i < data.length; i++) {
-			if(s.equals(data[i])) result = true;
+			if(data[i].equals(s)) result = true;
 		}
 		return result;
 	}
