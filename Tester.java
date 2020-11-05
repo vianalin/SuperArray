@@ -11,8 +11,8 @@ public class Tester {
 
 		a.add("hola");
 		a.add("ni hao");
-		a.add("good morning"); //5
-		a.add("!");
+		a.add("good morning"); 
+		a.add("!"); //5
 		a.add("bonjour");
 		a.add("hey");
 		a.add("konnichiwa");
@@ -20,11 +20,19 @@ public class Tester {
 		a.add("salut");
 		System.out.println(a.size()); //testing resize
 
-		System.out.println(a.set(1, "what's up")); //hi
-		System.out.println(a.get(1)); //testing set
+		System.out.println(a.set(5, "what's up")); //hi
+		System.out.println(a.get(5)); //testing set
 
 		//classwork
 		System.out.println(a.isEmpty()); //testing isempty false
 		System.out.println(b.isEmpty()); //testing isempty true
+
+		b.add("x");
+		System.out.println(b.size());
+		b.clear();
+		System.out.println(b.size()); //testing clear
+
+		System.out.println(b.toString()); //testing toString empty
+		System.out.println(a.toString()); //testing toString regular
 	}
 }
