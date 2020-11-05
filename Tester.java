@@ -1,7 +1,7 @@
 public class Tester {
 	public static void main(String[] args) {
-		SuperArray a = new SuperArray();
-		SuperArray b = new SuperArray();
+		SuperArray a = new SuperArray(10);
+		SuperArray b = new SuperArray(10);
 		
 		System.out.println(a.size()); //testing size
 
