@@ -48,5 +48,7 @@ public class Tester {
 
 		System.out.println(a.indexOf("lol")); //testing indexof -1
 		System.out.println(a.indexOf("ola")); //testing indexof 
+
+		System.out.println(a.toArray()); //testing toarray
 	}
 }
