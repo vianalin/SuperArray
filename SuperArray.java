@@ -4,9 +4,9 @@ public class SuperArray {
 	private int size; //the current size
 
 	// b. constructor
-	public SuperArray(int initialCapacity) { //classwork: change to provided starting capacity
+	public SuperArray() { //size 0, starting capacity 10
 		size = 0;
-		data = new String[initialCapacity];
+		data = new String[10];
 	}
 
 	// methods
@@ -40,6 +40,11 @@ public class SuperArray {
 	}
 
 	// 11/3 class 
+	public SuperArray(int initialCapacity) { //superarray with provided starting capacity.
+    	size = 0;
+   		data = new String[initialCapacity];
+  	}
+
 	public boolean isEmpty() { //returns true if list contains no elements
 		return(size() == 0);
 	}
@@ -110,15 +115,5 @@ public class SuperArray {
 		}
 		return array;
 	}
-
-	public static String arrToString(int[] arr) {
-        String result = "{";
-        if(arr.length == 0) return "{}";
-        for(int i = 0; i < arr.length - 1; i++) {
-            result = result + arr[i] + ", ";
-        }
-        result = result + arr[arr.length - 1] + "}";
-        return result;
-    }
 
 }
