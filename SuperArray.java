@@ -62,7 +62,7 @@ public class SuperArray {
 	public boolean contains(String s) {
 		boolean result = false;
 		for(int i = 0; i < data.length; i++) {
-			if(data[i].equals(s)) result = true;
+			if(s.equals(data[i])) result = true;
 		}
 		return result;
 	}
