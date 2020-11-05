@@ -4,9 +4,9 @@ public class SuperArray {
 	private int size; //the current size
 
 	//b. constructor
-	public SuperArray() {
+	public SuperArray(int initialCapacity) { //classwork: change to provided starting capacity
 		size = 0;
-		data = new String[10];
+		data = new String[initialCapacity];
 	}
 
 	//methods
@@ -66,4 +66,6 @@ public class SuperArray {
 		}
 		return result;
 	}
+
+
 }
