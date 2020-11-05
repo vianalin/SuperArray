@@ -1,15 +1,15 @@
 public class SuperArray {
-	//a. instance variables
+	// a. instance variables
 	private String[] data;
 	private int size; //the current size
 
-	//b. constructor
+	// b. constructor
 	public SuperArray(int initialCapacity) { //classwork: change to provided starting capacity
 		size = 0;
 		data = new String[initialCapacity];
 	}
 
-	//methods
+	// methods
 	public int size() { //c. returns number of elements in this list
 		return size;
 	}
@@ -39,7 +39,7 @@ public class SuperArray {
 		return replaced;
 	}
 
-	//11/3 class 
+	// 11/3 class 
 	public boolean isEmpty() { //returns true if list contains no elements
 		return(size() == 0);
 	}
@@ -66,6 +66,18 @@ public class SuperArray {
 		}
 		return result;
 	}
+
+	// 11/3 homework
+	public void add(int index, String element) { //adding specified element to specified position, shift current and subsequent elements down to right
+		if(size() == size) resize();
+		size++;
+		
+		for (int i = size(); i > index; i--) {
+			data[i] = data[i - 1];
+		}
+		data[index] = element;
+	}
+
 
 
 }
