@@ -34,5 +34,9 @@ public class Tester {
 
 		System.out.println(b.toString()); //testing toString empty
 		System.out.println(a.toString()); //testing toString regular
+
+		System.out.println(a.contains("o")); //testing contains false
+		System.out.println(b.contains("o")); //testing contains false
+		System.out.println(a.contains("ola")); //testing contains true
 	}
 }
