@@ -71,13 +71,29 @@ public class SuperArray {
 	public void add(int index, String element) { //adding specified element to specified position, shift current and subsequent elements down to right
 		if(size() == size) resize();
 		size++;
-		
-		for (int i = size(); i > index; i--) {
+
+		for(int i = size(); i > index; i--) {
 			data[i] = data[i - 1];
 		}
 		data[index] = element;
 	}
 
+	public String remove(int index) { //removes element from specified, shift subsequent elements to left, returned is removed element
+		String removed = data[index];
+		if(index >= size) return null;
 
+		String[] newData = new String[data.length - 1];
+		int count = 0;
+		
+		for(int i = 0; i < size; i++) {
+			if(i != index) {
+				newData[count] = data[i];
+				count++;
+			}
+		}
+		data = newData;
+		size--;
+		return removed;
+	}
 
 }
