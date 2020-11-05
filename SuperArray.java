@@ -65,11 +65,10 @@ public class SuperArray {
 	}
 
 	public boolean contains(String s) {
-		boolean result = false;
 		for(int i = 0; i < data.length; i++) {
-			if(s.equals(data[i])) result = true;
+			if(s.equals(data[i])) return true;
 		}
-		return result;
+		return false;
 	}
 
 	// 11/3 homework
@@ -114,6 +113,13 @@ public class SuperArray {
 			array[i] = data[i];
 		}
 		return array;
+	}
+
+	// 11/5 classwork
+	public static void removeDuplicates(SuperArray s) { //keep first occurence, remove rest of repetition
+		for(int i = 0; i < s.size(); i++) {
+			if(s.indexOf(s.get(i)) != i) s.remove(i); 
+		}
 	}
 
 }
