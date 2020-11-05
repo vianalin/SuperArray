@@ -1,6 +1,6 @@
 public class Tester {
 	public static void main(String[] args) {
-		SuperArray a = new SuperArray(10);
+		SuperArray a = new SuperArray(10); //tested providing starting capacity
 		SuperArray b = new SuperArray(10);
 		
 		System.out.println(a.size()); //testing size
@@ -23,7 +23,7 @@ public class Tester {
 		System.out.println(a.set(5, "what's up")); //hi
 		System.out.println(a.get(5)); //testing set
 
-		//classwork
+		// 11/3 classwork
 		System.out.println(a.isEmpty()); //testing isempty false
 		System.out.println(b.isEmpty()); //testing isempty true
 
@@ -38,5 +38,10 @@ public class Tester {
 		System.out.println(a.contains("o")); //testing contains false
 		System.out.println(b.contains("o")); //testing contains false
 		System.out.println(a.contains("ola")); //testing contains true
+
+		// 11/3 homework
+		a.add(5, "sup!");
+		System.out.println(a.toString()); //testing add void
+
 	}
 }
