@@ -96,4 +96,11 @@ public class SuperArray {
 		return removed;
 	}
 
+	public int indexOf(String s) { //return index of first occurrence of element, or -1 if list does not contain element
+		for(int i = 0; i < size; i++) {
+			if(s.equals(data[i])) return i;
+		}
+		return -1;
+	}
+
 }
