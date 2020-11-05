@@ -43,5 +43,7 @@ public class Tester {
 		a.add(5, "sup!");
 		System.out.println(a.toString()); //testing add void
 
+		System.out.println(a.remove(5)); 
+		System.out.println(a.toString()); //testing remove
 	}
 }
