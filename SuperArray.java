@@ -103,4 +103,22 @@ public class SuperArray {
 		return -1;
 	}
 
+	public String[] toArray() { //return array containing all element of list
+		String[] array = new String[size];
+		for(int i = 0; i < size; i++) {
+			array[i] = data[i];
+		}
+		return array;
+	}
+
+	public static String arrToString(int[] arr) {
+        String result = "{";
+        if(arr.length == 0) return "{}";
+        for(int i = 0; i < arr.length - 1; i++) {
+            result = result + arr[i] + ", ";
+        }
+        result = result + arr[arr.length - 1] + "}";
+        return result;
+    }
+
 }
