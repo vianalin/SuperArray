@@ -115,11 +115,4 @@ public class SuperArray {
 		return array;
 	}
 
-	// 11/5 classwork
-	public static void removeDuplicates(SuperArray s) { //keep first occurence, remove rest of repetition
-		for(int i = 0; i < s.size(); i++) {
-			if(s.indexOf(s.get(i)) != i) s.remove(i); 
-		}
-	}
-
 }
