@@ -115,11 +115,20 @@ public class SuperArray {
 		return array;
 	}
 
-	public int lastIndexOf(String value) { 
+	// 11/7 homework
+	public int lastIndexOf(String value) { //c
 		for(int i = size(); i >= 0; i--) {
 			if(value.equals(data[i])) return i;
 		}
 		return -1;
+	}
+
+	public boolean equals(SuperArray other) { //d superarrays r equal if corresponding elements are equal
+		if(size() != other.size()) return false;
+		for(int i = 0; i < size; i++) {
+			if(other.get(i).equals(data[i])) return true;
+		}
+		return false;
 	}
 
 }
