@@ -13,9 +13,11 @@ public class Demo {
     	SuperArray b = new SuperArray();
     	b.add("0");		b.add("4");		b.add("2");		b.add("2");		b.add("9");
     	System.out.println(findOverlap(a, b)); //testing findoverlap
+
+    	System.out.println(zip(a, b)); //testing zip
 	}
 
-	// 11/5 classwork
+	// 11/5 classwork & homework 
 	public static void removeDuplicates(SuperArray s) { //keep first occurence, remove rest of repetition
 		for(int i = s.size() - 1; i > 0; i--) {
 			if(s.indexOf(s.get(i)) != i) s.remove(i); 
@@ -29,5 +31,20 @@ public class Demo {
 		}
 		removeDuplicates(overlap);
 		return overlap;
+	}
+
+	public static SuperArray zip(SuperArray a, SuperArray b) { //merge arrays
+		SuperArray larger = a;
+		SuperArray smaller = b;
+		if(b.size() > a.size()) {
+			larger = b;
+			smaller = a;
+		}
+		SuperArray merged = new SuperArray(larger.size());
+		for(int i = 0; i < larger.size(); i++) {
+			if(i < a.size()) merged.add(a.get(i));
+			if(i < b.size()) merged.add(b.get(i));
+		}
+		return merged;
 	}
 }
