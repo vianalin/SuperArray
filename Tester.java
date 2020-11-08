@@ -50,6 +50,12 @@ public class Tester {
 		System.out.println(a.indexOf("ola")); //testing indexof 
 
 		System.out.println(a.toArray()); //testing toarray
+
+		// 11/7 homework
+		a.add(7, "!");
+		System.out.println(a.lastIndexOf("!"));
+		System.out.println(a.lastIndexOf("bonjour"));
+
 	}
 
 }

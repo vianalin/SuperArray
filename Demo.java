@@ -13,7 +13,6 @@ public class Demo {
     	SuperArray b = new SuperArray();
     	b.add("0");		b.add("4");		b.add("2");		b.add("2");		b.add("9");
     	System.out.println(findOverlap(a, b)); //testing findoverlap
-
 	}
 
 	// 11/5 classwork
