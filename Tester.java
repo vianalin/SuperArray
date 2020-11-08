@@ -54,8 +54,13 @@ public class Tester {
 		// 11/7 homework
 		a.add(7, "!");
 		System.out.println(a.lastIndexOf("!"));
-		System.out.println(a.lastIndexOf("bonjour"));
+		System.out.println(a.lastIndexOf("bonjour")); //testing last indexof
 
+		System.out.println(a.equals(b)); //testing equals false
+		b.add("hi");
+		SuperArray c = new SuperArray();
+		c.add("hi");
+		System.out.println(b.equals(c)); //testing equals true
 	}
 
 }
