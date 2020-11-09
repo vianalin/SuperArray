@@ -61,6 +61,8 @@ public class Tester {
 		SuperArray c = new SuperArray();
 		c.add("hi");
 		System.out.println(b.equals(c)); //testing equals true
+
+		System.out.println(b.zip(c)); //testing zip
 	}
 
 }

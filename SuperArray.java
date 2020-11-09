@@ -30,6 +30,7 @@ public class SuperArray {
 	}
 
 	public String get(int index) { //e. return element at the specified position in list
+		if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
 		return data[index];
 
 	}
@@ -41,6 +42,7 @@ public class SuperArray {
 
 	// 11/3 class 
 	public SuperArray(int initialCapacity) { //superarray with provided starting capacity.
+    	if(initialCapacity < 0) throw new IllegalArgumentException();
     	size = 0;
    		data = new String[initialCapacity];
   	}
@@ -115,7 +117,7 @@ public class SuperArray {
 		return array;
 	}
 
-	// 11/7 homework
+	// 11/5 homework
 	public int lastIndexOf(String value) { //c
 		for(int i = size(); i >= 0; i--) {
 			if(value.equals(data[i])) return i;
