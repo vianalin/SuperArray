@@ -62,7 +62,8 @@ public class Tester {
 		c.add("hi");
 		System.out.println(b.equals(c)); //testing equals true
 
-		System.out.println(b.zip(c)); //testing zip
+		// 11/9 homework
+		SuperArray hi = new SuperArray(-5);
 	}
 
 }
