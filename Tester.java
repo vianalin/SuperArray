@@ -63,7 +63,8 @@ public class Tester {
 		System.out.println(b.equals(c)); //testing equals true
 
 		// 11/9 homework
-		SuperArray hi = new SuperArray(-5);
+		//SuperArray hi = new SuperArray(-5);
+		System.out.println(a.get(-8));
 	}
 
 }
