@@ -35,6 +35,7 @@ public class SuperArray {
 
 	}
 	public String set(int index, String element) { //f. replaces element at specified pos with specified element. return value you replaced
+		if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
 		String replaced = data[index];
 		data[index] = element;
 		return replaced;
