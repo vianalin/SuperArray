@@ -87,6 +87,7 @@ public class SuperArray {
 	}
 
 	public String remove(int index) { //removes element from specified, shift subsequent elements to left, returned is removed element
+		if(index < 0 || index > size()) throw new IndexOutOfBoundsException();
 		String removed = data[index];
 		if(index >= size) return null;
 
