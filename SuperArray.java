@@ -76,6 +76,7 @@ public class SuperArray {
 
 	// 11/3 homework
 	public void add(int index, String element) { //adding specified element to specified position, shift current and subsequent elements down to right
+		if(index < 0 || index > size()) throw new IndexOutOfBoundsException();
 		if(size() == size) resize();
 		size++;
 
