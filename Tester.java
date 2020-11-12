@@ -64,7 +64,8 @@ public class Tester {
 
 		// 11/9 homework
 		//SuperArray hi = new SuperArray(-5);
-		System.out.println(a.get(-8));
+		//System.out.println(a.get(-8));
+		System.out.println(a.set(100, "hi"));
 	}
 
 }
