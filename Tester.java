@@ -66,7 +66,8 @@ public class Tester {
 		//SuperArray hi = new SuperArray(-5);
 		//System.out.println(a.get(-8));
 		//System.out.println(a.set(100, "hi"));
-		a.add(-111, "hello");
+		//a.add(-111, "hello");
+		System.out.println(a.remove(189));
 	}
 
 }
