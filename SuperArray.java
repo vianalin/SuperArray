@@ -68,7 +68,7 @@ public class SuperArray {
 	}
 
 	public boolean contains(String s) {
-		for(int i = 0; i < data.length; i++) {
+		for(int i = 0; i < size(); i++) {
 			if(s.equals(data[i])) return true;
 		}
 		return false;
@@ -87,7 +87,7 @@ public class SuperArray {
 	}
 
 	public String remove(int index) { //removes element from specified, shift subsequent elements to left, returned is removed element
-		if(index < 0 || index > size()) throw new IndexOutOfBoundsException();
+		if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
 		String removed = data[index];
 		if(index >= size) return null;
 
