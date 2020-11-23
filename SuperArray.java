@@ -77,14 +77,20 @@ public class SuperArray {
 	// 11/3 homework
 	public void add(int index, String element) { //adding specified element to specified position, shift current and subsequent elements down to right
 		if(index < 0 || index > size()) throw new IndexOutOfBoundsException();
-		if(size() == size) resize();
-		size++;
+		int newLen = data.length;
+    	if (data.length == size) newLen = (2 * size);
+   		String[] newData = new String[newLen];
 
-		for(int i = size(); i > index; i--) {
-			data[i] = data[i - 1];
-		}
-		data[index] = element;
-	}
+    	size++;
+
+    	for (int i = 0; i < size; i++) {
+    		if (i < index) newData[i] = data[i];
+      		else if (i == index) newData[i] = element;
+      		else newData[i] = data[i - 1];
+      	}
+
+    	data = newData;
+ 	 }
 
 	public String remove(int index) { //removes element from specified, shift subsequent elements to left, returned is removed element
 		if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
